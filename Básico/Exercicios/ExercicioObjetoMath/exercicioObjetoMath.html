@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atividade Objeto Math</title>
+  </head>
+  <body>
+    <script>
+      window.alert("Bem vindo a pagina calcula número.");
+      const confirmaCalculo = window.confirm("Deseja fazer um calculo?");
+
+      if (confirmaCalculo) {
+        const numero = window.prompt("Insira um número qualquer?");
+        document.body.innerHTML += `O número escolhido foi: <strong> ${numero} </strong><br/>`;
+        document.body.innerHTML += `Raiz quadrada: <strong> ${Math.sqrt(numero)} </strong><br/>`;
+        document.body.innerHTML += `É NaN <strong>${Number.isNaN(numero)}<strong/><br/>`;
+        document.body.innerHTML += `Arredondamento para baixo <strong>${Math.floor(numero)}</strong><br/>`;
+        document.body.innerHTML += `Arredondamento para cima <strong>${Math.ceil(numero)} </strong><br/>`;
+        document.body.innerHTML += `Com duas casas decimais <strong>${(parseFloat(numero).tofixed(2))}</strong><br/>`;
+      } else {
+        window.alert("Agradecemos por utilizar nossos serviços.");
+      }
+    </script>
+  </body>
+</html>
